@@ -1,0 +1,59 @@
+{
+  "name": "aidevs2",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "10": "bun 10_switching/10.ts",
+    "11": "bun 11_docs/11.ts",
+    "12": "bun 12_web/12.ts",
+    "13": "bun 13_functions/13.ts",
+    "14": "bun 14_agent/14.ts",
+    "15": "bun 15_tasks/15.ts",
+    "16": "bun 16_nocode/16.ts",
+    "17": "bun 17_tree/17.ts",
+    "18": "bun 18_knowledge/18.ts",
+    "19": "bun 19_llama/19.ts",
+    "20": "bun 20_catch/20.ts",
+    "21": "bun 21_similarity/21.ts",
+    "22": "bun 22_simple/22.ts",
+    "23": "bun 23_fragmented/23.ts",
+    "24": "bun 24_files/24.ts",
+    "25": "bun 25_correct/25.ts",
+    "26": "bun 26_summarize/26.ts",
+    "27": "bun 27_qdrant/27.ts",
+    "28": "bun 28_intent/28.ts",
+    "29": "bun 29_notify/29.ts",
+    "30": "bun 30_youtube/30.ts",
+    "01": "bun 01_langchain_init/01.ts",
+    "02": "bun 02_langchain_format/02.ts",
+    "03": "bun 03_langchain_stream/03.ts",
+    "04": "bun 04_tiktoken/04.ts",
+    "05": "bun 05_conversation/05.ts",
+    "06": "bun 06_external/06.ts",
+    "07": "bun 07_output/07.ts",
+    "08": "bun 08_cot/08.ts",
+    "09": "bun 09_context/09.ts",
+    "alice": "bun alice/alice.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@qdrant/js-client-rest": "^1.5.0",
+    "cheerio": "^1.0.0-rc.12",
+    "hnswlib-node": "2.0.0",
+    "langchain": "^0.0.156",
+    "node-html-markdown": "^1.3.0",
+    "openai": "^4.11.0",
+    "puppeteer": "^21.2.1",
+    "qdrant": "^1.3.1",
+    "tiktoken": "^1.0.10",
+    "uuid": "^9.0.1",
+    "xml-js": "^1.6.11",
+    "youtube-transcript": "^1.0.6",
+    "youtubei.js": "6.4.1"
+  }
+}
