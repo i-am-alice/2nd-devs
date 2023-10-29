@@ -1,7 +1,7 @@
 import {Message} from "./types";
 import { get_encoding } from "tiktoken";
-import {BaseMessage} from "langchain/schema";
 
+// Rolą tej funkcji jest estymowanie liczby tokenów w przekazanych wiadomościach z uwzględnieniem encodera konkretnego modelu
 export const countTokens = (messages: Message[], model="gpt-3.5-turbo-0613"): number => {
     const encoding = get_encoding("cl100k_base");
 
