@@ -24,7 +24,7 @@
     "28": "bun 28_intent/28.ts",
     "29": "bun 29_notify/29.ts",
     "30": "bun 30_youtube/30.ts",
-    "01": "npm 01_langchain_init/01.ts",
+    "01": "bun 01_langchain_init/01.ts",
     "02": "bun 02_langchain_format/02.ts",
     "03": "bun 03_langchain_stream/03.ts",
     "04": "bun 04_tiktoken/04.ts",
