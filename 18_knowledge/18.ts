@@ -3,7 +3,7 @@ import {HumanMessage, SystemMessage} from "langchain/schema";
 import {ChatOpenAI} from "langchain/chat_models/openai";
 import {searchDocs} from "./search.ts";
 import {Document} from "langchain/document";
-const loader = new TextLoader("18_rag/memory.md");
+const loader = new TextLoader("18_knowledge/knowledge.md");
 const [doc] = await loader.load();
 const documents = doc.pageContent.split("\n\n").map((content) => {
     return new Document({
