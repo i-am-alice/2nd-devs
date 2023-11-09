@@ -2,7 +2,7 @@
 .env
 .DS_Store
 .idea/
-alice/
+chat/memories/*
 # Logs
 
 logs
