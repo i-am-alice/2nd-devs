@@ -2,7 +2,7 @@ import {AIMessage, HumanMessage, SystemMessage} from "langchain/schema";
 import {ChatOpenAI} from "langchain/chat_models/openai";
 import * as fs from "fs";
 const chat = new ChatOpenAI({
-    modelName: "gpt-4",
+    modelName: "gpt-4-1106-preview",
 });
 const query = `I have been working on a desktop app project for macOS for a few months now. At this stage, I have approximately 2000 users of this app and I'm the only developer (can't change atm). This success signals that I may need to invest more resources into this project. Currently, I am the only developer of this app. Moreover, this is not my only project; I have several others, which necessitates careful time management and focus. I am faced with the decision of choosing between two paths:
 
