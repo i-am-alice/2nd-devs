@@ -30,6 +30,6 @@ const formattedChatPrompt = await chatPrompt.formatMessages({
 // Inicjalizacja domyślnego modelu, czyli gpt-3.5-turbo
 const chat = new ChatOpenAI();
 // Wykonanie zapytania do modelu
-const { content } = await chat.call(formattedChatPrompt);
+const { content } = await chat.invoke(formattedChatPrompt);
 
 console.log(content);

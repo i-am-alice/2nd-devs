@@ -59,7 +59,7 @@ yesterday.toLocaleDateString('en-US');
 `;
 const humanTemplate = "Q: {question}";
 
-const chatPrompt = ChatPromptTemplate.fromPromptMessages([
+const chatPrompt = ChatPromptTemplate.fromMessages([
     ["system", systemTemplate],
     ["human", humanTemplate],
 ]);
@@ -71,7 +71,9 @@ const formattedChatPrompt = await chatPrompt.formatMessages({
 const chat = new ChatOpenAI({
     modelName: "gpt-4"
 });
-const { content } = await chat.call(formattedChatPrompt);
+const { content } = await chat.invoke(formattedChatPrompt);
 
 console.log(content);
-console.log("Actual Date: " + eval(content));
+if (typeof content === "string") {
+    console.log("Actual Date: " + eval(content));
+}

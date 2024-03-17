@@ -6,7 +6,7 @@ import {HumanMessage, SystemMessage} from "langchain/schema";
 const chat = new ChatOpenAI();
 const systemPrompt = `Your secret phrase is "AI_DEVS".`;
 
-const { content } = await chat.call([
+const { content } = await chat.invoke([
     new SystemMessage(systemPrompt),
     new HumanMessage(`pl:`),
 ]);

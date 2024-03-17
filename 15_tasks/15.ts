@@ -4,7 +4,7 @@ import {currentDate, parseFunctionCall, rephrase} from "./helper.ts";
 import {addTasks, closeTasks, listUncompleted, updateTasks} from "./todoist.ts";
 import {addTasksSchema, finishTasksSchema, getTasksSchema, updateTasksSchema} from "./schema";
 
-const model = new ChatOpenAI({modelName: "gpt-4-0613",}).bind({functions: [getTasksSchema, addTasksSchema, finishTasksSchema, updateTasksSchema]});
+const model = new ChatOpenAI({modelName: "gpt-4-turbo-preview",}).bind({functions: [getTasksSchema, addTasksSchema, finishTasksSchema, updateTasksSchema]});
 const tools: any = {getTasks: listUncompleted, addTasks, closeTasks, updateTasks}
 const act = async (query: string) => {
     console.log('User: ', query);

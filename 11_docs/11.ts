@@ -16,7 +16,7 @@ const model = new ChatOpenAI({maxConcurrency: 5});
 const descriptionPromise = [];
 
 for (const doc of documents) {
-    descriptionPromise.push(model.call([
+    descriptionPromise.push(model.invoke([
         new SystemMessage(`
             Describe the following document with one of the following keywords:
             Mateusz, Jakub, Adam. Return the keyword and nothing else.

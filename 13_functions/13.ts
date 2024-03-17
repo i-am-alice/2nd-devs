@@ -34,6 +34,10 @@ const model = new ChatOpenAI({
     functions: [queryEnrichmentSchema],
     function_call: { name: "query_enrichment" },
 });
+console.log({
+    functions: [queryEnrichmentSchema],
+    function_call: { name: "query_enrichment" },
+})
 const result = await model.invoke([
     new HumanMessage("Hey there!")
 ]);

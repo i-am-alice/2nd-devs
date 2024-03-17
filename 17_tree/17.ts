@@ -25,7 +25,7 @@ let conversation = [
 ];
 async function chatAndLog(message: string) {
     conversation.push(new HumanMessage(message));
-    const { content } = await chat.call(conversation);
+    const { content } = await chat.invoke(conversation);
     conversation.push(new AIMessage(content));
     return content;
 }

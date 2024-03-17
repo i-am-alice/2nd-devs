@@ -1,15 +1,21 @@
 import {ITask, ITaskClose, ITaskModify} from "./todoist.dt";
 
 const apiCall = async (endpoint = '/me', method = 'GET', body = {}) => {
-    const response = await fetch(`https://api.todoist.com/rest/v2${endpoint}`, {
-        method,
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.TODOIST_API_KEY}`
-        },
-        body: method === 'POST' ? JSON.stringify(body) : undefined,
-    });
-    return response.status === 204 ? true : await response.json();
+    try {
+        const response = await fetch(`https://api.todoist.com/rest/v2${endpoint}`, {
+            method,
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${process.env.TODOIST_API_KEY}`
+            },
+            body: method === 'POST' ? JSON.stringify(body) : undefined,
+        });
+        return response.status === 204 ? true : await response.json();
+
+    } catch (err) {
+        console.log(err);
+    }
+
 }
 
 export const listUncompleted = async (): Promise<ITask[]> => {
