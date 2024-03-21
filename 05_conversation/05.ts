@@ -1,8 +1,9 @@
 import { BufferWindowMemory } from "langchain/memory";
 import { ConversationChain } from "langchain/chains";
-import {ChatOpenAI} from "langchain/chat_models/openai";
+import { OpenAI } from "@langchain/openai";
 
-const chat = new ChatOpenAI();
+
+const chat = new OpenAI();
 const memory = new BufferWindowMemory({ k: 1 });
 const chain = new ConversationChain({ llm: chat, memory: memory });
 const {response: response1} = await chain.call({ input: "Hey there! I'm Adam" });
