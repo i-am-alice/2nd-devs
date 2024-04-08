@@ -1,6 +1,6 @@
 Adam has various skills but describes himself as "just curious."
 
-Adam have a dog named Alexa.
+Adam has a dog named Alexa.
 
 Adam lives in Krakow with his fiancée and dog.
 
